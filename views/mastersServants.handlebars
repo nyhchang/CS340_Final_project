@@ -1,0 +1,47 @@
+<div id="input">
+	<h3>Choose a master below to view and add servants! </h3>
+  <form>
+    <h5>Choose a master</h5>
+    <select id="masterServ">
+      {{#each masterServ}}
+        <option value={{this.master}}>{{this.master}}</option>
+      {{/each}}
+    </select>
+    <h5>Choose a servant</h5>
+    <select id="servant">
+      {{#each masterServantRes}}
+        <option value={{this.servant}}>{{this.servant}}</option>
+      {{/each}}
+    </select>
+    <div id="leftAlign">Level: </div>
+    <div id="rightAlign"><input type="number" name="level" required/></div><br>
+    <div id="leftAlign">Ascension Level: </div>
+    <div id="rightAlign"><input type="number" name="ascensionLevel" required/></div><br>
+    <input type="submit" value="Add">
+  </form>
+
+</div>
+
+<div id="table">
+    <h3>Here are the current masters and their servants</h3>
+    <table id="mastersServantsTable">
+			<tr>
+				<th>Username</th>
+				<th>Servant</th>
+        <th>Ascension Level</th>
+        <th>Level</th>
+        <th>Delete?</th>
+			</tr>
+			
+			{{#each results}}
+					<tr>
+						<td>{{this.userName}}</td>
+						<td>{{this.Servant}}</td>
+            <td>{{this.ascensionLevel}}</td>
+            <td>{{this.level}}</td>
+            <td><a href="/verify?id={{this.id}}"><input type="button" name="deleteServant" value="Delete"></a></td>
+					</tr>
+			{{/each}}
+			
+		</table>
+</div>

@@ -1,0 +1,78 @@
+<div id="input">
+	<h3>Type in the servant details and click Add to add to database </h3>
+  <form>
+    <div id="leftAlign">Servant Name: </div>
+    <div id="rightAlign"><input type="text" name="newServant" required/></div><br>
+    <div id="leftAlign">Rarity:</div>
+    <div id="rightAlign">
+        <select id="rarity">
+            <option value="1">1 star</option>
+            <option value="2">2 star</option>
+            <option value="3">3 star</option>
+            <option value="4">4 star</option>
+            <option value="5">5 star</option>
+        </select>
+    </div><br>
+    <div id="leftAlign">Class: </div>
+    <div id="rightAlign">
+        <select id="Class">
+            {{#each classRes}}
+            <option value={{this.class}}>{{this.class}}</option>
+            {{/each}}
+        </select>
+    </div><br>
+    <div id="leftAlign">Skill 1: </div>
+    <div id="rightAlign">
+        <select id="Skill 1">
+            {{#each skill1Res}}
+            <option value={{this.skill}}>{{this.skill}}</option>
+            {{/each}}
+        </select>
+    </div><br>
+        <div id="leftAlign">Skill 2: </div>
+    <div id="rightAlign">
+        <select id="Skill 2">
+            {{#each skillRes}}
+            <option value={{this.skill}}>{{this.skill}}</option>
+            {{/each}}
+        </select>
+    </div><br>
+        <div id="leftAlign">Skill 3: </div>
+    <div id="rightAlign">
+        <select id="Skill 3">
+            {{#each skillRes}}
+            <option value={{this.skill}}>{{this.skill}}</option>
+            {{/each}}
+        </select>
+    </div><br>
+    <input type="submit" value="Add" /> <br>
+  </form>
+
+</div>
+
+<div id="table">
+    <h3>Here are the current servants in the database</h3>
+    <table id="servantsTable">
+			<tr>
+				<th>ID</th>
+				<th>Servant</th>
+                <th>Rarity</th>
+                <th>Class</th>
+                <th>Skill 1</th>
+                <th>Skill 2</th>
+                <th>Skill 3</th>
+			</tr>
+			
+			{{#each servlist}}
+					<tr>
+						<td>{{this.ID}}</td>
+                        <td>{{this.Servant}}</td>
+						<td>{{this.Rarity}}</td>
+                        <td>{{this.Class}}</td>
+                        <td>{{this.Skill1}}</td>
+                        <td>{{this.Skill2}}</td>
+                        <td>{{this.Skill3}}</td>
+					</tr>
+			{{/each}}
+		</table>
+</div>

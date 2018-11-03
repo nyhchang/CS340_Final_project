@@ -1,0 +1,27 @@
+<div id="input">
+	<h3>Type in a material and click submit to add to database </h3>
+  <form>
+    <div id="leftAlign">Material Name: </div>
+    <div id="rightAlign"><input type="text" name="newMaterial" required/></div><br><br>
+    <input type="submit" value="Add" /> <br>
+  </form>
+
+</div>
+
+<div id="table">
+    <h3>Here are the current materials in the database</h3>
+    <table id="materialsTable">
+			<tr>
+				<th>ID</th>
+				<th>Material</th>
+			</tr>
+			
+			{{#each materials}}
+					<tr>
+						<td>{{this.id}}</td>
+						<td>{{this.material}}</td>
+					</tr>
+			{{/each}}
+			
+		</table>
+</div>

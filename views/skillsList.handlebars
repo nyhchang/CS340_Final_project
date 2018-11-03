@@ -1,0 +1,27 @@
+<div id="input">
+	<h3>Type in a skill name and click submit to add to database </h3>
+  <form>
+    <div id="leftAlign">Skill Name: </div>
+    <div id="rightAlign"><input type="text" name="newSkill" required/></div><br><br>
+    <input type="submit" value="Add" /> <br>
+  </form>
+
+</div>
+
+<div id="table">
+    <h3>Here are the current skills in the database</h3>
+    <table id="materialsTable">
+			<tr>
+				<th>ID</th>
+				<th>Skill</th>
+			</tr>
+			
+			{{#each skills}}
+					<tr>
+						<td>{{this.id}}</td>
+						<td>{{this.skill}}</td>
+					</tr>
+			{{/each}}
+			
+		</table>
+</div>

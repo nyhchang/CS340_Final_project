@@ -1,0 +1,43 @@
+<div id="input">
+	<h3>Choose a master below to view and edit material count! </h3>
+  <form>
+    <h5>Choose a master</h5>
+    <select id="master">
+      {{#each masterRes}}
+        <option value={{this.master}}>{{this.master}}</option>
+      {{/each}}
+    </select>
+    <h5>Choose a material</h5>
+    <select id="masterMat">
+      {{#each masterMatRes}}
+        <option value={{this.master}}>{{this.master}}</option>
+      {{/each}}
+    </select>
+    <h5>Change the quantity</h5>
+      <input type="number" name="quantity" required /> </br>
+      </br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+</div>
+
+<div id="table">
+    <h3>Here are the current masters and their material counts</h3>
+    <table id="mastersMaterialsTable">
+			<tr>
+				<th>Username</th>
+				<th>Material</th>
+        <th>Count</th>
+			</tr>
+			
+			{{#each mastersMaterials}}
+					<tr>
+						<td>{{this.userName}}</td>
+						<td>{{this.material}}</td>
+            <td>{{this.quantity}}</td>
+					</tr>
+			{{/each}}
+			
+		</table>
+</div>

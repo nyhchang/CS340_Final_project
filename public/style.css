@@ -1,0 +1,91 @@
+th, td {
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+div {
+	width: 50%;
+	border-radius: 10px;
+	margin-top:10px;
+	padding:5px;
+}
+
+#grayDIV {
+	background-color: #d9d9d9;
+}
+
+#results{
+	width: 60%;
+}
+
+#newTable{
+	display: none;
+}
+
+.leftAlign{
+	text-align: left;
+	border: 0px;
+	padding: 1px;
+}
+
+.rightAlign{
+	text-align: right;
+	border: 0px;
+	padding: 1px;
+}
+
+#input{
+	background-color: #99CCFF;
+}
+
+h3{
+	margin-top:5px;
+	margin-bottom:10px;
+}
+
+div.links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	border-radius: 10px;
+}
+div.links li {
+    float: left;
+}
+div.links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+div.links li a:hover {
+    background-color: #111;
+}
+
+
+.button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+#map {
+	height: 450px;
+	background-color: transparent;
+}

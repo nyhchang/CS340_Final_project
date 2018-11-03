@@ -1,0 +1,39 @@
+<div id="input">
+	<h3>Enter info below to register! </h3>
+	<form action="/newMaster" method="POST">
+		<table id="newMasterTable">
+			<tr>
+				<td class="rightAlign"> Username:</td>
+				<td class="leftAlign"><input type="text" name="userName" required></td>
+			</tr>
+			<tr>
+				<td class="rightAlign">Password:</td>
+				<td class="leftAlign"><input type="password" name="password" required></td>
+			</tr>
+			<tr>
+				<td class="rightAlign">Master Level:</td>
+				<td class="leftAlign"><input type="number" name="masterLevel" required></td>
+			</tr>
+		</table>
+		<input type = "submit" value="Submit">
+	</form>
+</div>
+
+<div id="table">
+    <h3>Here are the currently registered masters!</h3>
+    <table id="mastersRegisteredTable">
+			<tr>
+				<th>Username</th>
+				<th>Master Level</th>
+			</tr>
+			
+			{{#each masters}}
+					<tr>
+						<td>{{this.userName}}</td>
+						<td>{{this.masterLevel}}</td>
+					</tr>
+			{{/each}}
+			
+		</table>
+</div>
+

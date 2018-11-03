@@ -1,0 +1,37 @@
+<div id="input">
+    <h3>Type in class details and click Add to add to database </h3>
+    <form>
+        <div id="leftAlign">Class Name: </div>
+        <div id="rightAlign"><input type="text" name="newClass" required /></div>
+        <div id="leftAlign">Class Name: </div>
+        <div id="rightAlign">
+            <select id="classes">
+                {{#each classRes}}
+                <option value="newWeakness">{{this.class}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <input type="submit" value="Add" /> <br>
+    </form>
+
+</div>
+
+<div id="table">
+    <h3>Here are the current clases in the database</h3>
+    <table id="classesTable">
+        <tr>
+            <th>ID</th>
+            <th>Class</th>
+            <th>Weakness</th>
+        </tr>
+
+        {{#each classes}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.class}}</td>
+            <td>{{this.cWeakness}}</td>
+        </tr>
+        {{/each}}
+
+    </table>
+</div>
